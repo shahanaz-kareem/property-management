@@ -20,7 +20,7 @@ class PropertyController extends Controller
 
       public function list(){
 
-        $property = Property::get();
+        $property = Property::with('region','images')->get();
         return view('properties.list',compact('property'));
     }
     public function store(Request $request){

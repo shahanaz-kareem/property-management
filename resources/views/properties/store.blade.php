@@ -135,10 +135,9 @@
                                     processData: false,
                                     contentType: false, 
                                     success: function(response) {
-                                        if(response.success) {
-                                            $('#successMessage').html('<div class="alert alert-success">' + response.success + '</div>');
-                                            
-                                        }
+                                     
+                                            location.href = '{{ route("property.list") }}';
+                                           
                                     },
                                     error: function(xhr) {
                                         
